@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E558976-629E-46C0-A17B-8D8FA2208BD1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtendedModifiers</RootNamespace>
+    <AssemblyName>ExtendedModifiers</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\FaceMix\bin\Debug\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\FaceMix\bin\Release\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GenerateDispAngerExpressionsMorphs.cs" />
+    <Compile Include="GenerateDispAngerExpressionsMorphsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenerateDispAngerExpressionsMorphsControl.Designer.cs">
+      <DependentUpon>GenerateDispAngerExpressionsMorphsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GenerateDispHappyExpressionsMorphs.cs" />
+    <Compile Include="GenerateDispHappyExpressionsMorphsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenerateDispHappyExpressionsMorphsControl.Designer.cs">
+      <DependentUpon>GenerateDispHappyExpressionsMorphsControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GenerateDispAngerExpressionsMorphsControl.resx">
+      <DependentUpon>GenerateDispAngerExpressionsMorphsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateDispHappyExpressionsMorphsControl.resx">
+      <DependentUpon>GenerateDispHappyExpressionsMorphsControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FaceMixBase\FaceMix.Base.csproj">
+      <Project>{5FE3757A-C380-427E-9C05-848555B79879}</Project>
+      <Name>FaceMix.Base</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FaceMixCore\FaceMix.Core.csproj">
+      <Project>{D703AF00-5A3A-47DE-AFA3-C4343C584116}</Project>
+      <Name>FaceMix.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FaceMixWrappers\FaceMix.Wrappers.vcxproj">
+      <Project>{15F64F20-0744-461C-B04E-61DA9E32C2D0}</Project>
+      <Name>FaceMix.Wrappers</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

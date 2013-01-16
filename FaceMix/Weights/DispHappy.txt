@@ -1,0 +1,5 @@
+Happy60 = 12,5 * DispHappy1
+Happy70 = 6,5 * DispHappy1 + 12 * DispHappy2
+Happy80 = 12,5 * DispHappy2 + 7 * DispHappy3
+Happy90 = 14 * DispHappy3 + 3,25 * DispHappy4
+Happy100 = 19,5 * DispHappy4

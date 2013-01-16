@@ -1,0 +1,5 @@
+Anger40 = 12,5 * DispAnger1
+Anger30 = 5,5 * DispAnger1 + 12,5 * DispAnger2
+Anger20 = 12,5 * DispAnger2 + 7,5 * DispAnger3
+Anger10 = 15,5 * DispAnger3 + 3,25 * DispAnger4
+Anger0 = 25,5 * DispAnger4
